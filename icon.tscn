@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://c5luvxtuax055"]
+
+[ext_resource type="Texture2D" uid="uid://dh35yeduw34kw" path="res://icon.svg" id="1_05ift"]
+[ext_resource type="Script" path="res://playground/icon.gd" id="2_2ftd3"]
+[ext_resource type="PackedScene" uid="uid://dambuj6jmeovh" path="res://playground/highlight.tscn" id="3_5ew6d"]
+
+[node name="Icon" type="Sprite2D"]
+position = Vector2(312, 256)
+texture = ExtResource("1_05ift")
+script = ExtResource("2_2ftd3")
+
+[node name="Highlight" parent="." instance=ExtResource("3_5ew6d")]
+frame_width = 2.0

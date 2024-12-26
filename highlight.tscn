@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://dambuj6jmeovh"]
+
+[ext_resource type="Script" path="res://playground/highlight.gd" id="1_chval"]
+
+[node name="Highlight" type="Node2D"]
+script = ExtResource("1_chval")
+color = Color(0.302436, 0.697825, 0.570658, 1)
