@@ -6,21 +6,19 @@ extends Node2D
 
 @onready var _frame: float = frame_buffer + frame_width
 @onready var _parent: Node = get_parent()
-@onready var _size_x: float = _parent.texture.get_width()
-@onready var _size_y: float = _parent.texture.get_height()
+@onready var _size = _parent.texture.get_size()
 
 
 func _draw() -> void:
-	var position_x = (_size_x /2) + (_frame /2)
-	var position_y = (_size_y /2) + (_frame /2)
 	draw_rect(
 		Rect2(
-		Vector2(-position_x, -position_y),
-		Vector2(_size_x + _frame, _size_y + _frame)
+		Vector2(-_size.x + -_frame, -_size.y + -_frame) / 2,
+		Vector2(_size.x + _frame, _size.y +_frame)
 		),
 		color,
 		false,
-		frame_width)
+		frame_width,
+		true)
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouse:
